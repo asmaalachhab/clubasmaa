@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="asmaa.client.controller.ReservationController">
 
-</AnchorPane>
+    <top>
+        <Label text="Réservation du terrain"
+               style="-fx-font-size:22; -fx-font-weight:bold;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+
+            <ComboBox fx:id="cityBox" promptText="Choisir la ville"/>
+            <ComboBox fx:id="timeBox" promptText="Créneau disponible"/>
+
+            <Label fx:id="priceLabel" text="Prix : --- DH"/>
+
+            <ChoiceBox fx:id="paymentBox">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Carte bancaire"/>
+                        <String fx:value="Cash"/>
+                        <String fx:value="Paiement sur place"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+
+            <Button text="Confirmer la réservation"
+                    onAction="#confirmReservation"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>

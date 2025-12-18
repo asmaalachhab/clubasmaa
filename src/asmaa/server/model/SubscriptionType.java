@@ -1,4 +1,7 @@
 package asmaa.server.model;
 
-public class SubscriptionType {
+public enum SubscriptionType {
+    ONE_MONTH,
+    SIX_MONTHS,
+    ONE_YEAR
 }

@@ -1,4 +1,9 @@
 package asmaa.client.model;
 
-public class SportType {
+
+public enum SportType {
+    FOOTBALL,
+    BASKETBALL,
+    TENNIS,
+    PADEL
 }

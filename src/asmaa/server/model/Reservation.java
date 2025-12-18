@@ -1,4 +1,32 @@
 package asmaa.server.model;
 
-public class Reservation {
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Reservation implements Serializable {
+    private int id;
+    private User user;
+    private Terrain terrain;
+    private LocalDate date;
+    private LocalTime timeSlot;
+    private Payment payment;
+
+    public Reservation() {}
+    public Reservation(int id, User user, Terrain terrain, LocalDate date, LocalTime timeSlot, Payment payment) {
+        this.id=id; this.user=user; this.terrain=terrain; this.date=date; this.timeSlot=timeSlot; this.payment=payment;
+    }
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id=id; }
+    public User getUser() { return user; }
+    public void setUser(User user) { this.user=user; }
+    public Terrain getTerrain() { return terrain; }
+    public void setTerrain(Terrain terrain) { this.terrain=terrain; }
+    public LocalDate getDate() { return date; }
+    public void setDate(LocalDate date) { this.date=date; }
+    public LocalTime getTimeSlot() { return timeSlot; }
+    public void setTimeSlot(LocalTime timeSlot) { this.timeSlot=timeSlot; }
+    public Payment getPayment() { return payment; }
+    public void setPayment(Payment payment) { this.payment=payment; }
 }

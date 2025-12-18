@@ -1,4 +1,7 @@
 package asmaa.client.model;
 
-public class UserRole {
+public enum UserRole {
+    CLIENT,
+    ADMIN,
+    INVITE
 }

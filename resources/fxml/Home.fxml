@@ -1,14 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="asmaa.client.controller.HomeController"
+            stylesheets="@/css/style.css">
 
-</AnchorPane>
+    <!-- HEADER -->
+    <top>
+        <StackPane>
+            <ImageView fitHeight="300" fitWidth="1200">
+                <image>
+                    <Image url="@/images/bg.jpg"/>
+                </image>
+            </ImageView>
+
+            <VBox alignment="CENTER" spacing="15">
+                <Label text="Bienvenue à ASMAA Club" styleClass="title"/>
+                <HBox spacing="15" alignment="CENTER" styleClass="menu">
+                    <Button text="Accueil"/>
+                    <MenuButton text="Notre Club">
+                        <MenuItem text="Présentation"/>
+                    </MenuButton>
+                    <MenuButton text="Villes">
+                        <MenuItem text="Casablanca"/>
+                        <MenuItem text="Agadir"/>
+                        <MenuItem text="Fès"/>
+                        <MenuItem text="Tanger"/>
+                        <MenuItem text="Marrakech"/>
+                    </MenuButton>
+                    <MenuButton text="Centres">
+                        <MenuItem text="Football"/>
+                        <MenuItem text="Basketball"/>
+                        <MenuItem text="Tennis"/>
+                        <MenuItem text="Padel"/>
+                    </MenuButton>
+                    <Button text="Contact"/>
+                    <Button text="Login / S'inscrire"/>
+                </HBox>
+            </VBox>
+        </StackPane>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+        <GridPane alignment="CENTER" hgap="25" vgap="25">
+            <ImageView fx:id="footballImg" fitWidth="250" fitHeight="150"
+                       onMouseClicked="#openFootball">
+                <image>
+                    <Image url="@/images/football.jpg"/>
+                </image>
+            </ImageView>
+
+            <ImageView fx:id="basketImg" fitWidth="250" fitHeight="150"
+                       GridPane.columnIndex="1"
+                       onMouseClicked="#openBasket">
+                <image>
+                    <Image url="@/images/basketball.jpg"/>
+                </image>
+            </ImageView>
+
+            <ImageView fx:id="tennisImg" fitWidth="250" fitHeight="150"
+                       GridPane.rowIndex="1"
+                       onMouseClicked="#openTennis">
+                <image>
+                    <Image url="@/images/tennis.jpg"/>
+                </image>
+            </ImageView>
+
+            <ImageView fx:id="padelImg" fitWidth="250" fitHeight="150"
+                       GridPane.columnIndex="1"
+                       GridPane.rowIndex="1"
+                       onMouseClicked="#openPadel">
+                <image>
+                    <Image url="@/images/padel.jpg"/>
+                </image>
+            </ImageView>
+        </GridPane>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox spacing="30" alignment="CENTER" styleClass="footer">
+            <Label text="Casablanca - Centre ASMAA"/>
+            <Label text="Agadir - Centre ASMAA"/>
+            <Label text="Fès - Centre ASMAA"/>
+            <Label text="Tanger - Centre ASMAA"/>
+            <Label text="Marrakech - Centre ASMAA"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

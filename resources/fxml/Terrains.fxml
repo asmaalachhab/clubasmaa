@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+            fx:controller="asmaa.client.controller.TerrainsController">
 
-</AnchorPane>
+    <top>
+        <Label text="ASMAA Club - Réservation de Terrains"
+               styleClass="title"/>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true">
+            <TilePane fx:id="terrainsPane"
+                      hgap="20"
+                      vgap="20"
+                      prefColumns="3"
+                      styleClass="terrain-container"/>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="20" styleClass="reservation-bar">
+            <Label fx:id="selectedTerrainLabel"
+                   text="Aucun terrain sélectionné"/>
+            <ComboBox fx:id="timeBox"
+                      promptText="Choisir un créneau"/>
+            <Button text="Réserver"
+                    onAction="#reserve"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

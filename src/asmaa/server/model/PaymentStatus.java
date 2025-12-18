@@ -1,4 +1,7 @@
 package asmaa.server.model;
 
-public class PaymentStatus {
+public enum PaymentStatus {
+    PAYE,
+    EN_ATTENTE,
+    SUR_PLACE
 }

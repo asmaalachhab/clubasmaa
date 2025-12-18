@@ -1,0 +1,40 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f5f7fa;
+}
+
+.title {
+    -fx-font-size: 26px;
+    -fx-padding: 20;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.terrain-container {
+    -fx-padding: 20;
+}
+
+.terrain-card {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 4);
+    -fx-cursor: hand;
+}
+
+.terrain-card:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+.terrain-name {
+    -fx-padding: 10 0 0 0;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.reservation-bar {
+    -fx-padding: 15;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdde1;
+}
